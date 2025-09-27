@@ -1,16 +1,46 @@
 ---
+import HeaderMenu from "../Components/HeaderMenu.astro";
 
 ---
 
-<html lang="en">
+<html lang="cden">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
-	</body>
+    <HeaderMenu/>
+
+	<div id="Redes_sociales">
+		<a href=""><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+        <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+		<a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+	</div>
+	<div id = "Video_Container">
+		<h1>Radiant ring</h1>
+<video autoplay muted loop id= "Video">
+	  <source src="" type="video/mp4">
+</video>
+
+<h1>Tu mejor opcion en comida</h1>
+<div class="info">
+<h2> Quienes Somos?</h2>
+<p>Somos una empresa dedicada a la venta de comida rapida, con mas de 10 años en el mercado, contamos con sucursales en todo el pais, y estamos comprometidos con la calidad y el servicio al cliente.</p>
+
+<h2>Meta</h2>
+<p>Nuestra meta es ofrecer la mejor experiencia gastronomica a nuestros clientes, con productos de alta calidad y un servicio excepcional.</p>
+ 
+<h2>Vision</h2>
+<p>Ser la cadena de comida rapida mas reconocida y valorada en el pais, ofreciendo productos innovadores y un servicio al cliente excepcional.</p>
+</div>
+
+
+</body>
 </html>
