@@ -1,0 +1,40 @@
+---
+import Footer from "../Components/Footer.astro";
+---
+<!DOCTYPE html>
+<html lang="cden">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+          <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Astro</title>
+    </head>
+    <body>
+        <form id="buzon_form">
+        <h1>Contactanos</h1>
+        <input type="text" placeholder="Nombre de la sucursal" required/>
+        <textarea placeholder="queja" required></textarea>
+        <input type="file" accept="image/*" required />
+        <button type="submit" id="confirmar">Enviar</button>
+
+        </form>
+        <script>
+        const form = document.getElementById('buzon_form');
+        const confirmacion = document.getElementById('confirmar');
+        
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Gracias por mandar tu queja o sugerencia, nos ayudara a mejorar nuestro servicio');
+        form.reset();
+
+    })
+   </script>
+   <Footer/>
+    </body>
+    
+    </html> 
