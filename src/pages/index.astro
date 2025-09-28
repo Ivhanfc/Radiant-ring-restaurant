@@ -1,72 +1,11 @@
 ---
+import Layout from "../layouts/Layout.astro";
 import HeaderMenu from "../Components/HeaderMenu.astro";
+import Hero from "../Components/Hero.astro";
 import Footer from "../Components/Footer.astro";
+
 ---
-
-<html lang="cden">
-	<head>
-		<link rel="stylesheet" href="/styles/global.css">
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
-    rel="stylesheet"
-  />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-    <HeaderMenu/>
-
-	
-	<div id = "Video_Container">
-		<h1>Radiant ring</h1>
-<video autoplay muted loop id= "Video">
-	  <source src="/videos/videochef.mp4" type="video/mp4">
-</video>
-</div>
-
-
-<h1>Tu mejor opcion en comida</h1>
-<div class="info">
-<h2> Quienes Somos?</h2>
-<p>Somos una empresa dedicada a la venta de comida rapida, con mas de 10 años en el mercado, contamos con sucursales en todo el pais, y estamos comprometidos con la calidad y el servicio al cliente.</p>
-
-<h2>Meta</h2>
-<p>Nuestra meta es ofrecer la mejor experiencia gastronomica a nuestros clientes, con productos de alta calidad y un servicio excepcional.</p>
- 
-<h2>Vision</h2>
-<p>Ser la cadena de comida rapida mas reconocida y valorada en el pais, ofreciendo productos innovadores y un servicio al cliente excepcional.</p>
-</div>
-
-<Footer/>
-<style>
-	#Video_Container {
-		background-color: red;
-		width: 100%;
-		height: 500px;
-	}
-	#Video_Container video {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
-	#Video_Container h1 {
-		font-family: 'Playfair Display', serif;
-		position: absolute;
-		top: 40%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		color: white;
-		font-size: 3em;
-		text-shadow: 2px 2px 4px #000000;
-
-	}
-</style>
-</body>
-</html>
+<Layout>
+	<HeaderMenu />
+	<Hero />
+</Layout>

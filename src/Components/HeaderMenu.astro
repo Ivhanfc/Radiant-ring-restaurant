@@ -1,65 +1,87 @@
-
----
----
-
-
-<div id="Menu" >
-			<ul>
-				<a href="http://localhost:4321/index"><li>Quienes Somos?</li></a>
-				<a href="http://localhost:4321/menu"><li>Menu</li></a>
-   				<a href="http://localhost:4321/sucursales"><li>Sucursales</li></a>
-				<a href="http://localhost:4321/contacto"><li>Quejas O Sugerencias</li></a>
-
-
-			</ul>
-			<div id="Redes_sociales">
-		<a href=""><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
-        <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
-		<a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+<header>
+	<video src="public/videos/videochef.mp4" autoplay muted loop></video>
+  <nav>
+    <div class="logo">
+		<a href="#">
+		<img src="public/img/logo-small.png" alt="" width="70" height="70">
+		</a>
 	</div>
-		</div>
-		<style>
-			#Menu {
-				background-color: white;
-				overflow: hidden;
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				padding: 10px 20px;
-				height: 100px;
+    <div class="nav-links">
+      <ul><li><a href="" class="active">Home</a></li></ul>
+      <ul><li><a href="">About</a></li></ul>
+      <ul><li><a href="">Menu</a></li></ul>
+      <ul><li><a href="">Order Online</a></li></ul>
+      <ul><li><a href="">Contact</a></li></ul>
+    </div>
+  </nav>
 
-			}
 
-			#Menu ul {
-				list-style-type: none;
-				margin: 0 auto;
-				padding: 0;
-				display: flex;
-			
-			}
+  <div class="hero-content">
+	<img src="public/img/logoImg.avif" alt="">
+  </div>
+</header>
 
-			#Menu ul li {
-				padding: 14px 20px;
-			}
+<style>
+	header{
+		width: 100vw;
+		height: 80vh;
+	}
 
-			#Menu ul li a {
-				font-size: 17px;
-				text-decoration: none;
-			}
+	video{
+		width: 100vw;
+		height: 80vh;
+		position: absolute;
+		left: 0;
+		right: 0;
+		object-fit: cover;
+		z-index: -10;
+	}
 
-			#Menu ul li a:hover {
-				background-color: #ddd;
-				color: black;
-			}
+	nav{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 10px 100px;
+	}
 
-			#Redes_sociales a {
-				color: white;
-				text-decoration: none;
-				font-size: 20px;
-				margin-left: 15px;
-			}
+	.nav-links{
+		display: flex;
+		gap: 20px;
+	}
 
-			#Redes_sociales a:hover {
-				color: #ddd;
-			}
-		</style>
+	.nav-links ul{
+		list-style: none;
+		
+	}
+
+	.nav-links a{
+		text-decoration: none;
+		color: #fff;
+		font-size: 20px;
+	}
+
+	.active{
+		color: #d0161d !important;
+		position: relative;
+		
+		&::before{
+			content: '';
+			width: 110%;
+			height: 200%;
+			background: #f9f1d6;
+			position: absolute;
+			top: -25px;
+			left: 0;
+			z-index: -1;
+			border-radius: 0 0 5px 5px;
+		}
+	}
+
+	.hero-content{
+		margin-top: 120px;
+		display: flex;
+		justify-content: center;
+	}
+
+	
+</style>
