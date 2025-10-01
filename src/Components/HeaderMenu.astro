@@ -1,0 +1,88 @@
+<header>
+	<video src="public/videos/videochef.mp4" autoplay muted loop></video>
+  <nav>
+    <div class="logo">
+		<a href="#">
+		<img src="public/img/logo-small.png" alt="" width="70" height="70">
+		</a>
+	</div>
+    <div class="nav-links">
+       <ul><li><a href="/">Inicio</a></li></ul>
+  <ul><li><a href="/ordenaya">Ordena Ya</a></li></ul>
+  <ul><li><a href="/menu">Menú</a></li></ul>
+  <ul><li><a href="/contacto">Contáctanos</a></li></ul>
+
+    </div>
+  </nav>
+
+
+  <div class="hero-content">
+	<img src="public/img/logoImg.avif" alt="">
+  </div>
+</header>
+
+<style>
+	header{
+		width: 100vw;
+		height: 80vh;
+		margin-bottom: 30px;
+	}
+
+	video{
+		width: 100vw;
+		height: 80vh;
+		position: absolute;
+		left: 0;
+		right: 0;
+		object-fit: cover;
+		z-index: -10;
+	}
+
+	nav{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 10px 100px;
+	}
+
+	.nav-links{
+		display: flex;
+		gap: 20px;
+	}
+
+	.nav-links ul{
+		list-style: none;
+		
+	}
+
+	.nav-links a{
+		text-decoration: none;
+		color: #fff;
+		font-size: 20px;
+	}
+
+	.active{
+		color: #d0161d !important;
+		position: relative;
+		
+		&::before{
+			content: '';
+			width: 110%;
+			height: 200%;
+			background: #f9f1d6;
+			position: absolute;
+			top: -25px;
+			left: 0;
+			z-index: -1;
+			border-radius: 0 0 5px 5px;
+		}
+	}
+
+	.hero-content{
+		margin-top: 120px;
+		display: flex;
+		justify-content: center;
+	}
+
+	
+</style>
