@@ -1,54 +1,164 @@
 <section>
-    <h2>CONOCE NUESTRA CALIDAD</h2>
+  <h2>CONOCE NUESTRO MENU</h2>
 
-   <div class="grid-container">
-    <div class="item item1"><img src="public/img/sushi.jpg" alt="Imagen 1"></div>
-    <div class="item item2"><img src="public/img/tabla-sushi.jpg" alt="Imagen 2"></div>
-    <div class="item item3"><img src="public/img/gyozas.jpg" alt="Imagen 3"></div>
-    <div class="item item4"><img src="public/img/ramen.jpg" alt="Imagen 4"></div>
-    <div class="item item5"><img src="public/img/takoyaki.jpg" alt="Imagen 5"></div>
+  <div class="menu-container">
+    <div class="menu-picker">
+
+      <div class="section-item picker">
+        <img src="public/img/platillos-picker/Entrante.jpg" alt="" />
+        <span>Entrantes</span>
+      </div>
+
+      <div class="section-item">
+        <img src="public/img/platillos-picker/Comida.webp" alt="" />
+        <span>Comidas</span>
+      </div>
+
+      <div class="section-item">
+        <img src="public/img/platillos-picker/Bebidas.webp" alt="" />
+        <span>Bebidas</span>
+      </div>
+
+      <div class="section-item">
+        <img src="public/img/platillos-picker/Postres.jpg" alt="" />
+        <span>Postres</span>
+      </div>
+    </div>
+
+    <main>
+      <div id="Entrantes">
+        <div class="grid-menu">
+          <div class="menu-item">
+            <img src="public/img/platillos/Entradas/edamames.jpg" alt="" />
+            <h3>Edamame</h3>
+            <p>Vainas de soya hervidas y saladas.</p>
+            <span>$5.99</span>
+          </div>
+
+
+          <div class="menu-item">
+            <img src="public/img/platillos/Entradas/gyoza.webp" alt="" />
+            <h3>Gyoza</h3>
+            <p>Empanadillas rellenas, generalmente de cerdo y verduras.</p>
+            <span>$5.99</span>
+          </div>
+
+
+          <div class="menu-item">
+            <img src="public/img/platillos/Entradas/tsukemono.jpg" alt="" />
+            <h3>Tsukemono</h3>
+            <p>Vegetales encurtidos.</p>
+            <span>$5.99</span>
+          </div>
+
+
+          <div class="menu-item">
+            <img src="public/img/platillos/Entradas/miso-shiru-soup.jpg" alt="" />
+            <h3>Miso shiru</h3>
+            <p>Sopa de miso con tofu y algas.</p>
+            <span>$5.99</span>
+          </div>
+
+
+          <div class="menu-item">
+            <img src="public/img/platillos/Entradas/sunomono.jpg" alt="" />
+            <h3>Sunomono</h3>
+            <p>Ensaladas con vinagre de arroz.</p>
+            <span>$5.99</span>
+          </div>
+
+
+          <div class="menu-item">
+            <img src="public/img/platillos/Entradas/Chawanmushi.jpg" alt="" />
+            <h3>Chawanmushi</h3>
+            <p>Flan salado de huevo al vapor.</p>
+            <span>$5.99</span>
+          </div>
+
+
+        </div>
+      </div>
+      <div id="Comidas" hidden></div>
+      <div id="Bebidas" hidden></div>
+      <div id="Postres" hidden></div>
+    </main>
   </div>
 </section>
 
-<section>
-  
-</section>
-
 <style>
-    body{
-        overflow-x: hidden;
-    }
+  section{
+    margin-bottom: 50px;
+  }
+  h2 {
+    text-align: center;
+    font-size: 40px;
+    color: #9d0208;
+    margin-bottom: 20px;
+  }
 
-    h2{
-      text-align: center;
-      font-size: 40px;
-      color: tomato;
-      margin-bottom: 20px;
-    }
+  .menu-picker {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 60px;
+    
+  }
 
-   .grid-container {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: repeat(5, 120px); 
-      gap: 5px;
-    }
+  .section-item{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    padding: 20px;
+  }
 
-    .item {
-      overflow: hidden; 
-      
-    }
+  .section-item img {
+    width: 150px;
+    height: 150px;
+   margin-bottom: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    border-radius: 50%;
+  }
 
-    .item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; 
-      display: block;
-    }
+  .section-item.picker{
+    border-bottom: 5px solid #9d0208;
+  }
 
- 
-    .item1 { grid-column: span 2; grid-row: span 2; }
-    .item2 { grid-column: 3 / span 2; grid-row: span 2; }
-    .item3 { grid-row: 3 / span 3; }
-    .item4 { grid-column: span 2; grid-row: 3 / span 3; }
-    .item5 { grid-column: 4; grid-row: 3 / span 3; }
+  .grid-menu{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 0 50px;
+  }
+
+  .menu-item{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #fff;
+    width: 80%;
+  }
+
+  .menu-item img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border-radius: 10%;
+  }
+
+  .menu-item h3{
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+
+  .menu-item span{
+    color: #9d0208;
+    font-size: 16px;
+    margin-top: 5px;
+  }
+
+
 </style>
