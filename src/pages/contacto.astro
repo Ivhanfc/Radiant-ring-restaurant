@@ -1,28 +1,84 @@
 ---
 import Footer from "../Components/Footer.astro";
+import Layout from "../layouts/Layout.astro";
+import HeaderMenu from "../Components/HeaderMenu.astro";
+import Hero from "../Components/Hero.astro";
+
 ---
-<!DOCTYPE html>
-<html lang="cden">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-          <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  />
-        <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
-        <title>Astro</title>
-    </head>
-    <body>
+<Layout>
+	<HeaderMenu />
+
+
+    <main>
         <form id="buzon_form">
         <h1>Contactanos</h1>
+        <p>Todo lo enviado sera de manera anonima.</p>
         <input type="text" placeholder="Nombre de la sucursal" required/>
         <textarea placeholder="queja" required></textarea>
         <input type="file" accept="image/*" required />
         <button type="submit" id="confirmar">Enviar</button>
-
+    
         </form>
+        <style>
+            #buzon_form {
+                border: 1px solid #ccccccbb;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                max-width: 600px;
+                height: 700px;
+                margin: 0 auto;
+                text-align: center;
+                padding: 100px 0;
+                align-items: center;
+           }
+            #buzon_form h1 {
+                font-size: 40px;
+                color: tomato;
+            }
+            #buzon_form input {
+                padding: 10px;
+                border: 1px solid #ccccccbb;
+                width: 400px; 
+            }
+            #buzon_form textarea {
+                border: 1px solid #ccccccbb;
+
+                width: 400px;
+                height: 200px;
+                resize: vertical ;
+                padding: 10px;
+            }
+            #buzon_form button {
+                color: white;
+                border-radius: 10px;
+                width: 200px;
+                height: 100;
+                background-color: tomato;
+            }
+            #buzon_form button:hover {
+                background-color: #e5533d;
+                cursor: pointer;
+                animation: buttonHover 0.3s;
+            }
+            #buzon form input:focus, #buzon_form textarea:focus {
+                animation: inputFocus 0.3s;
+                cursor: pointer;
+
+            }
+
+            @keyframes buttonHover {
+                0% { transform: scale(1); }
+                50% { transform: scale(1.1); background-color: #e5533d; }
+                100% { transform: scale(1); }
+            }
+             @keyframes inputFocus {
+                0% { transform: scale(1); }
+                50% { transform: scale(1.1); }
+                100% { transform: scale(1); }
+            }
+        </style>
+    </main>
         <script>
         const form = document.getElementById('buzon_form');
         const confirmacion = document.getElementById('confirmar');
@@ -35,6 +91,6 @@ import Footer from "../Components/Footer.astro";
     })
    </script>
    <Footer/>
-    </body>
+</Layout>
     
-    </html> 
+    
