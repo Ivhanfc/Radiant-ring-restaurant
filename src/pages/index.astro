@@ -4,136 +4,14 @@ import HeaderMenu from "../Components/HeaderMenu.astro";
 import Hero from "../Components/Hero.astro";
 import Experiencia from "../Components/Experiencia.astro";
 import Footer from "../Components/Footer.astro";
+import Contacto from "../Components/Contacto.astro";
+
 ---
 
 <Layout>
-  <HeaderMenu />
-
-  <section class="quienes-somos">
-    <h1>Quiénes Somos</h1>
-    <p>
-      En <strong>Kaze Hana</strong> creemos que la comida japonesa es mucho más que un plato en la mesa: es cultura, tradición y hospitalidad. Nuestro restaurante nace con la idea de compartir la esencia de Japón a través de recetas auténticas y frescas, combinadas con un toque contemporáneo que las hace únicas.
-    </p>
-    <p>
-      Cada rollo, cada tazón de ramen y cada nigiri se prepara con dedicación, seleccionando ingredientes de la más alta calidad. Queremos que cada visita sea una experiencia: desde el primer saludo hasta el último sorbo de té verde.
-    </p>
-    <p>
-      Nuestro compromiso es brindarte un espacio cálido y relajado, donde amigos y familias puedan reunirse para disfrutar de sabores que cuentan historias. En Kaze Hana la pasión por la cocina se une con la atención al detalle, para que siempre quieras regresar.
-    </p>
-  </section>
-
-  <Hero />
-
-  <section>
-    <h2>Visión</h2>
-    <p>
-      Ser el referente local de la cocina japonesa contemporánea, reconocido por la calidad auténtica, la creatividad en sus preparaciones y una experiencia cálida que conecta tradición y modernidad.
-    </p>
-  </section>
-
-  <section>
-    <h2>Misión</h2>
-    <p>
-      Ofrecer una experiencia gastronómica única que celebre la cultura japonesa, a través de un menú cuidadosamente elaborado, un servicio excepcional y un ambiente acogedor que invite a la comunidad a disfrutar y compartir.
-    </p>
-  </section>
-
-  <section>
-    <h2>Valores</h2>
-    <ul>
-      <li><strong>Autenticidad:</strong> Respetamos las tradiciones culinarias japonesas, utilizando ingredientes frescos y técnicas genuinas.</li>
-      <li><strong>Calidad:</strong> Nos comprometemos a ofrecer productos de la más alta calidad en cada plato que servimos.</li>
-      <li><strong>Hospitalidad:</strong> Valoramos a nuestros clientes y nos esforzamos por brindar un servicio cálido y atento.</li>
-      <li><strong>Innovación:</strong> Buscamos constantemente nuevas formas de sorprender y deleitar a nuestros comensales con sabores creativos.</li>
-      <li><strong>Sostenibilidad:</strong> Promovemos prácticas responsables que respetan el medio ambiente y apoyan a los productores locales.</li>
-      <li><strong>Trabajo en equipo:</strong> Fomentamos un ambiente de colaboración y respeto entre nuestro staff.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Horario de atención</h2>
-    <p>
-      Lunes a viernes: 13:00 – 22:30<br/>
-      Sábado: 13:00 – 23:30<br/>
-      Domingo: 13:00 – 21:00
-    </p>
-  </section>
-  <section>
-	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13461.252696506892!2d-116.97011936044925!3d32.49105780000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d939534feb9b81%3A0x87a5d606513331f9!2sSukiyaki!5e0!3m2!1ses-419!2smx!4v1759282232459!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-  </section>
-
-  <Footer />
-
-  <style>
-    body {
-      background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
-      font-family: "Poppins", sans-serif;
-    }
-
-    section {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 20px;
-      color: #f5f5f5;
-    }
-
-    h1, h2 {
-		font-size: 30px;
-      text-align: center;
-      margin-bottom: 15px;
-      font-style: italic;
-      color: #e63946; /* rojo japonés */
-    }
-
-    p {
-      font-size: 18px;
-      line-height: 1.7;
-      margin-bottom: 15px;
-      text-align: justify;
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    ul li {
-      font-size: 18px;
-      line-height: 1.6;
-      margin-bottom: 10px;
-      text-align: left;
-    }
-
-    ul li strong {
-      color: #f1faee;
-    }
-
-  iframe {
-	width: 100%;
-    margin: 0 auto;
-    border-radius: 10px;
-    box-shadow: 1px 1px 10px 1px #f1faee;
-  }
-  iframe:hover {
-  animation: fadeInUp 1s ease forwards;
-
-  }
-  @keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-  </style>
-
-</Layout>
-=======
 	<HeaderMenu />
 	<Hero />
 	<Experiencia />
+	<Contacto />
 	<Footer />
 </Layout>

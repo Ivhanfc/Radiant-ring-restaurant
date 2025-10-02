@@ -1,3 +1,5 @@
+
+
 <section>
   <h2>CONOCE NUESTRO MENU</h2>
 
@@ -32,7 +34,6 @@
             <img src="public/img/platillos/Entradas/edamames.jpg" alt="" />
             <h3>Edamame</h3>
             <p>Vainas de soya hervidas y saladas.</p>
-            <span>$5.99</span>
           </div>
 
 
@@ -40,7 +41,6 @@
             <img src="public/img/platillos/Entradas/gyoza.webp" alt="" />
             <h3>Gyoza</h3>
             <p>Empanadillas rellenas, generalmente de cerdo y verduras.</p>
-            <span>$5.99</span>
           </div>
 
 
@@ -48,7 +48,6 @@
             <img src="public/img/platillos/Entradas/tsukemono.jpg" alt="" />
             <h3>Tsukemono</h3>
             <p>Vegetales encurtidos.</p>
-            <span>$5.99</span>
           </div>
 
 
@@ -56,7 +55,6 @@
             <img src="public/img/platillos/Entradas/miso-shiru-soup.jpg" alt="" />
             <h3>Miso shiru</h3>
             <p>Sopa de miso con tofu y algas.</p>
-            <span>$5.99</span>
           </div>
 
 
@@ -64,7 +62,6 @@
             <img src="public/img/platillos/Entradas/sunomono.jpg" alt="" />
             <h3>Sunomono</h3>
             <p>Ensaladas con vinagre de arroz.</p>
-            <span>$5.99</span>
           </div>
 
 
@@ -72,7 +69,6 @@
             <img src="public/img/platillos/Entradas/Chawanmushi.jpg" alt="" />
             <h3>Chawanmushi</h3>
             <p>Flan salado de huevo al vapor.</p>
-            <span>$5.99</span>
           </div>
 
 
@@ -162,3 +158,27 @@
 
 
 </style>
+
+<script>
+   const max = 300;
+    const min = 100; 
+    const numpr = 6; //numero de productos
+    let preciosram = [];
+    const grid = document.querySelector("#Entrantes .grid-menu");
+     const items = grid.querySelectorAll(".menu-item");
+    for(var i=0; i< numpr; i++) {
+          let precioR = Math.floor(Math.random()  * (max - min + 1)) + min;
+          preciosram.push(precioR);
+          console.log(preciosram[i])
+    
+
+    }
+     
+     items.forEach((item, idx) => {
+      let span = document.createElement("span")
+  span.textContent = `$${(preciosram[idx])} mxn`;
+  item.appendChild(span);
+
+     })
+
+</script>

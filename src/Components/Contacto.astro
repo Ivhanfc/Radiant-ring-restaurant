@@ -1,16 +1,6 @@
----
-import Footer from "../Components/Footer.astro";
-import Layout from "../layouts/Layout.astro";
-import HeaderMenu from "../Components/HeaderMenu.astro";
-import Hero from "../Components/Hero.astro";
 
----
-<Layout>
-	<HeaderMenu />
-
-
-    <main>
-        <form id="buzon_form">
+<section>
+            <form id="buzon_form">
         <h1>Contactanos</h1>
         <p>Todo lo enviado sera de manera anonima.</p>
         <input type="text" placeholder="Nombre de la sucursal" required/>
@@ -78,7 +68,7 @@ import Hero from "../Components/Hero.astro";
                 100% { transform: scale(1); }
             }
         </style>
-    </main>
+</section>
         <script>
         const form = document.getElementById('buzon_form');
         const confirmacion = document.getElementById('confirmar');
@@ -90,7 +80,3 @@ import Hero from "../Components/Hero.astro";
 
     })
    </script>
-   <Footer/>
-</Layout>
-    
-    

@@ -1,16 +1,16 @@
-<header>
+<header id="Home">
 	<video src="public/videos/videochef.mp4" autoplay muted loop></video>
   <nav>
     <div class="logo">
-		<a href="#">
+		<a href=".menu-container">
 		<img src="public/img/logo-small.png" alt="" width="70" height="70">
 		</a>
 	</div>
-    <div class="nav-links">
-       <ul><li><a href="/">Inicio</a></li></ul>
-  <ul><li><a href="/ordenaya">Ordena Ya</a></li></ul>
-  <ul><li><a href="/menu">Menú</a></li></ul>
-  <ul><li><a href="/contacto">Contáctanos</a></li></ul>
+    <div class="nav-links" >
+       <ul><li><a href="#Home">Home</a></li></ul>
+  <ul><li><a href="#Entrantes">Menú</a></li></ul>
+    <ul><li><a href="/ordenaya">Order</a></li></ul>
+  <ul><li><a href="#buzon_form">Contact</a></li></ul>
 
     </div>
   </nav>
@@ -21,7 +21,7 @@
 	<p>Auténtica experiencia Izakaya con sabores tradicionales y ambiente único.</p>
 	<div class="btn-hero">
 		<a href="#" >Reserva tu mesa</a>
-		<a href="#" >Ver el menú</a>
+		<a href="#Entrantes" >Ver el menú</a>
 	</div>
   </div>
 
@@ -29,7 +29,20 @@
 	<img src="public/img/keyboard-arrow.png" alt="">
   </div>
 </header>
+<script>
+	const nav_link = document.querySelector('.nav-links');
+	const items = nav_link.querySelectorAll('a');
+	items.forEach(item => {
+  item.addEventListener('mouseenter', () => {
+    // quitar "active" de todos los links
+    items.forEach(i => i.classList.remove('active'));
 
+    // poner "active" solo en el link donde está el mouse
+    item.classList.add('active');
+  });
+});
+
+</script>
 <style>
 	header{
 		width: 100vw;
@@ -51,10 +64,15 @@
 	}
 
 	nav{
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 1000;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 10px 100px;
+		padding: 10px 50px;
+		background-color: #26252522;
 	}
 
 	.nav-links{
