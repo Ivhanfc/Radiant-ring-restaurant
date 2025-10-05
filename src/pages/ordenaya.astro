@@ -1,6 +1,37 @@
 ---
-import Footer from "../Components/Footer.astro";
+import Layout from "../layouts/Layout.astro";
 import HeaderMenu from "../Components/HeaderMenu.astro";
-
 ---
 
+<Layout>
+  <HeaderMenu />
+
+  <div id="qrCustom" style="margin: 40px auto; width: fit-content;"></div>
+<h1>Escanea tu pedido aqui</h1>
+  <!-- Cargar la librería QRCode -->
+  <script is:raw src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+  <!-- Generar el código QR -->
+  <script is:raw>
+    const min = 1000;
+    const max = 9999;
+    const precioR = Math.floor(Math.random() * (max - min + 1)) + min;
+    console.log("Precio aleatorio:", precioR);
+
+    window.addEventListener("DOMContentLoaded", () => {
+      const qrElemento = document.getElementById("qrCustom");
+      if (qrElemento && window.QRCode) {
+        new QRCode(qrElemento, {
+          text: precioR.toString(),
+          width: 400,
+          height: 400,
+          colorDark: "#000000",
+          colorLight: "#ffffff",
+          correctLevel: QRCode.CorrectLevel.H
+        });
+      } else {
+        console.error("No se encontró el elemento o QRCode no está disponible.");
+      }
+    });
+  </script>
+</Layout>
