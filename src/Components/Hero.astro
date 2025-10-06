@@ -1,12 +1,10 @@
-
-
 <section>
   <h2>CONOCE NUESTRO MENU</h2>
 
   <div class="menu-container">
     <div class="menu-picker">
 
-      <div class="section-item">
+      <div class="section-item picker">
         <img src="public/img/platillos-picker/Entrante.jpg" alt="" />
         <span>Entrantes</span>
         <div class="Barra_roja" hidden></div>
@@ -46,20 +44,20 @@
             <p>Empanadillas rellenas, generalmente de cerdo y verduras.</p>
           </div>
 
-
           <div class="menu-item">
             <img src="public/img/platillos/Entradas/tsukemono.jpg" alt="" />
             <h3>Tsukemono</h3>
             <p>Vegetales encurtidos.</p>
           </div>
 
-
           <div class="menu-item">
-            <img src="public/img/platillos/Entradas/miso-shiru-soup.jpg" alt="" />
+            <img
+              src="public/img/platillos/Entradas/miso-shiru-soup.jpg"
+              alt=""
+            />
             <h3>Miso shiru</h3>
             <p>Sopa de miso con tofu y algas.</p>
           </div>
-
 
           <div class="menu-item">
             <img src="public/img/platillos/Entradas/sunomono.jpg" alt="" />
@@ -67,14 +65,11 @@
             <p>Ensaladas con vinagre de arroz.</p>
           </div>
 
-
           <div class="menu-item">
             <img src="public/img/platillos/Entradas/Chawanmushi.jpg" alt="" />
             <h3>Chawanmushi</h3>
             <p>Flan salado de huevo al vapor.</p>
           </div>
-
-
         </div>
       </div>
       <div id="Comidas" hidden></div>
@@ -85,8 +80,8 @@
 </section>
 
 <style>
-  section{
-    margin-bottom: 50px;
+  section {
+    margin-bottom: 80px;
   }
   h2 {
     text-align: center;
@@ -100,65 +95,52 @@
     justify-content: center;
     gap: 40px;
     margin-bottom: 60px;
-    
   }
 
-  .section-item{
+  main{
+    padding: 0 100px;
+  }
+
+  .section-item {
     display: flex;
     flex-direction: column;
     text-align: center;
     color: #fff;
     cursor: pointer;
     padding: 20px;
+  
+  }
+
+  .picker{
+      border-bottom: #9d0208 3px solid;
   }
 
   .section-item img {
     width: 150px;
     height: 150px;
-   margin-bottom: 10px;
+    margin-bottom: 10px;
     object-fit: cover;
     transition: transform 0.3s ease;
     border-radius: 50%;
   }
 
-  .Barra_roja {
-    border-bottom: 5px solid #9d0208;
-  }
-  .section-item img:hover {
-  animation agrandar 0.7s forwards; /* duración y que conserve el último estado */
-  }
-  .grid-menu{
+  .grid-menu {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     padding: 0 50px;
   }
 
-  .menu-item{
+  .menu-item {
     display: flex;
     flex-direction: column;
     text-align: center;
     color: #fff;
     width: 80%;
+    cursor: pointer;
   }
 
-  @keyframes agrandar{
-    0% {
-          transform: scale(1);
-    }
-   
-    100% {
-          transform: scale(1.1);
-
-
-    }
-  }
-  .menu-item:hover {
-  animation: agrandar 0.7s forwards; /* duración y que conserve el último estado */
-
-  }
-
-  .menu-item img{
+  .menu-item img {
     width: 100%;
     height: 150px;
     object-fit: cover;
@@ -166,61 +148,14 @@
     border-radius: 10%;
   }
 
-  .menu-item h3{
+  .menu-item h3 {
     font-size: 20px;
     margin-bottom: 5px;
   }
 
-  .menu-item span{
+  .menu-item span {
     color: #9d0208;
     font-size: 16px;
     margin-top: 5px;
   }
-
-
 </style>
-
-<script>
-   const max = 300;
-    const min = 100; 
-    const numpr = 6; //numero de productos
-    let preciosram = [];
-    const grid = document.querySelector("#Entrantes .grid-menu");
-     const items = grid.querySelectorAll(".menu-item");
-    for(var i=0; i< numpr; i++) {
-          let precioR = Math.floor(Math.random()  * (max - min + 1)) + min;
-          preciosram.push(precioR);
-          console.log(preciosram[i])
-    
-
-    }
-     
-     items.forEach((item, idx) => {
-      let span = document.createElement("span")
-  span.textContent = `$${(preciosram[idx])} mxn`;
-  item.appendChild(span);
-
-     })
-
-     const itemsM = document.querySelectorAll(".section-item");
-
-itemsM.forEach(item => {
-  item.addEventListener("mouseenter", () => {
-    // Ocultar todas las barras
-    document.querySelectorAll(".Barra_roja").forEach(bar => {
-      bar.hidden = true;
-    });
-
-    // Mostrar la barra del item clicado
-    const barra = item.querySelector(".Barra_roja");
-    barra.hidden = false;
-
-   
-    // Mostrar la sección que corresponde al texto (span)
-    const nombre = item.querySelector("span").textContent.trim();
-    const section = document.getElementById(nombre);
-    if(section) section.hidden = false;
-  });
-});
-
-</script>

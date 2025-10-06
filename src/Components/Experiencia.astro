@@ -5,11 +5,14 @@
         <div class="experience-grid">
             
 <div class="parent">
-    <div class="div1 item"><img src="public/img/experiencia/japanese-restaurant.jpg" alt=""></div>
+    <div class="div1 item"><img src="public/img/experiencia/decoracion-restaurante-japones.jpg" alt=""></div>
     <div class="div2 item"><img src="public/img/experiencia/japanese-restaurant.jpg" alt=""></div>
-    <div class="div3 item"><img src="public/img/experiencia/food.jpg" alt=""></div>
+    <div class="div3 item"><img src="public/img/experiencia/food.webp" alt=""></div>
     <div class="div4 item"><img src="public/img/experiencia/people.jpg" alt=""></div>
-    <div class="div5 item">5</div>
+    <div class="div5 item">
+        <div>
+            <h3>Sumérgete en la auténtica experiencia </h3>
+            <p>En nuestro restaurante, cada rincón está diseñado para transportarte a Japón. Desde la decoración tradicional hasta la música ambiental, te ofrecemos un espacio acogedor donde puedes disfrutar de deliciosos platillos y bebidas en un ambiente relajado y auténtico. Ya sea que vengas con amigos y familiares</p>
 </div>
     
         </div>
@@ -22,16 +25,19 @@
         font-size: 40px;
     }
 
-    
+    .experience-grid{
+        padding: 0 120px;
+    }
 .parent {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
     gap: 8px;
+    height: 80vh;
 }
 
 .item{
-    border-radius: 10px;
+    
     
 }
 .item img{
@@ -67,7 +73,28 @@
     grid-row: span 2 / span 2;
     grid-column-start: 4;
     grid-row-start: 3;
-}
+   
     
-        
+   
+   
+    border: 3px solid #9d0208;
+    text-align: justify;
+}
+
+
+.div5 h3{
+    font-size: 23px;
+    
+    text-align: center;
+    color: #9d0208;
+    padding-top: 40px;
+}
+
+.div5 p{
+    padding:  10px 40px;
+     font-size: 17px;
+     
+    color: #fff;
+}
+         
 </style>

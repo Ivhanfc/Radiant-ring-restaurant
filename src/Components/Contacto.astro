@@ -1,82 +1,248 @@
-
 <section>
-            <form id="buzon_form">
-        <h1>Contactanos</h1>
-        <p>Todo lo enviado sera de manera anonima.</p>
-        <input type="text" placeholder="Nombre de la sucursal" required/>
-        <textarea placeholder="queja" required></textarea>
-        <input type="file" accept="image/*" required />
-        <button type="submit" id="confirmar">Enviar</button>
+<div class="contact-container">
+
+<div class="torii">
+
+  <div class="top-bar"></div>
+  
+  <div class="cross-bar"></div>
+  
+  <div class="pillar-left"></div>
+  <div class="pillar-right"></div>
+
+  <div class="shadow-left"></div>
+  <div class="shadow-right"></div>
+</div>
+
+
+  
+  <form id="contactForm">
+    <h2>Contáctanos</h2>
+    <div class="form-group">
+      <label for="name">Nombre</label>
+      <input type="text" id="name" placeholder="Francisco Javier" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Correo Electrónico</label>
+      <input type="email" id="email" placeholder="javifran05@gmail.com" required>
+    </div>
+    <div class="form-group">
+      <label for="message">Mensaje</label>
+      <textarea id="message" placeholder="Escribe tu mensaje..." required></textarea>
+    </div>
+    <button type="submit" class="submit-btn">Enviar</button>
+  
+
+
+    <div class="contact-data">
+    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#9D0208"><path d="M480-440v-360q0-17 11.5-28.5T520-840h280q17 0 28.5 11.5T840-800v200q0 17-11.5 28.5T800-560H600L480-440Zm80-200h200v-120H560v120Zm0 0v-120 120Zm238 520q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z"/></svg>
+    <span>+1 (619) 712-9331</span>
     
-        </form>
-        <style>
-            #buzon_form {
-                border: 1px solid #ccccccbb;
-                display: flex;
-                flex-direction: column;
-                gap: 20px;
-                max-width: 600px;
-                height: 700px;
-                margin: 0 auto;
-                text-align: center;
-                padding: 100px 0;
-                align-items: center;
-           }
-            #buzon_form h1 {
-                font-size: 40px;
-                color: tomato;
-            }
-            #buzon_form input {
-                padding: 10px;
-                border: 1px solid #ccccccbb;
-                width: 400px; 
-            }
-            #buzon_form textarea {
-                border: 1px solid #ccccccbb;
+    &bull;
+    
+    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#9D0208"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg>
+    <span>albor0829@gmail.com</span>
+  </div>
+  </form>
 
-                width: 400px;
-                height: 200px;
-                resize: vertical ;
-                padding: 10px;
-            }
-            #buzon_form button {
-                color: white;
-                border-radius: 10px;
-                width: 200px;
-                height: 100;
-                background-color: tomato;
-            }
-            #buzon_form button:hover {
-                background-color: #e5533d;
-                cursor: pointer;
-                animation: buttonHover 0.3s;
-            }
-            #buzon form input:focus, #buzon_form textarea:focus {
-                animation: inputFocus 0.3s;
-                cursor: pointer;
 
-            }
+</div>
 
-            @keyframes buttonHover {
-                0% { transform: scale(1); }
-                50% { transform: scale(1.1); background-color: #e5533d; }
-                100% { transform: scale(1); }
-            }
-             @keyframes inputFocus {
-                0% { transform: scale(1); }
-                50% { transform: scale(1.1); }
-                100% { transform: scale(1); }
-            }
-        </style>
 </section>
-        <script>
-        const form = document.getElementById('buzon_form');
-        const confirmacion = document.getElementById('confirmar');
-        
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        alert('Gracias por mandar tu queja o sugerencia, nos ayudara a mejorar nuestro servicio');
-        form.reset();
 
-    })
-   </script>
+<style>
+ 
+  .contact-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+ 
+  .torii {
+  position: relative;
+  width: 300px;
+  height: 180px;
+  margin-bottom: -50px;
+}
+
+ .torii .top-bar {
+  width: 100%;
+  height: 25px;
+  background: linear-gradient(90deg, #d32f2f, #b71c1c);
+  border-radius: 50% / 20%;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+ .torii .cross-bar {
+  width: 80%;
+  height: 14px;
+  background: #ff6659;
+  position: absolute;
+  top: 30px;
+  left: 10%;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+  z-index: 2;
+}
+
+ .torii .pillar-left,
+.torii .pillar-right {
+  width: 20px;
+  height: 130px;
+  background: linear-gradient(#d32f2f, #b71c1c);
+  position: absolute;
+  top: 25px;
+  border-radius: 8px;
+  z-index: 1;
+  box-shadow: inset -2px 0 5px rgba(0,0,0,0.2);
+}
+
+  
+.torii .pillar-left { left: 0; }
+.torii .pillar-right { right: 0; }
+
+
+.torii .shadow-left,
+.torii .shadow-right {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 130px;
+  top: 30px;
+  background: rgba(0,0,0,0.1);
+  border-radius: 8px;
+  z-index: 0;
+}
+
+.torii .shadow-left { left: 5px; transform: skewY(-10deg); }
+.torii .shadow-right { right: 5px; transform: skewY(10deg); }
+
+
+  
+  form {
+    width: 100%;
+    max-width: 600px;
+    background: #f1faee;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  form::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 150px;
+    height: 150px;
+    background: #ffab9f;
+    border-radius: 50%;
+    z-index: 0;
+  }
+
+  form h2 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #d32f2f;
+    position: relative;
+    z-index: 1;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+  }
+
+  .form-group label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #444;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 12px 15px;
+    border: 2px solid #d32f2f33;
+    border-radius: 12px;
+    font-size: 16px;
+    transition: border 0.3s, box-shadow 0.3s;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: #d32f2f;
+    box-shadow: 0 0 8px rgba(211,47,47,0.3);
+    outline: none;
+  }
+
+  textarea {
+    resize: none;
+    min-height: 120px;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #d32f2f;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+    position: relative;
+    z-index: 1;
+  }
+
+  .submit-btn:hover {
+    background-color: #ff6659;
+    transform: translateY(-3px);
+  }
+
+  .contact-data{
+       display: flex; 
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+  }
+
+  
+  @media (max-width: 768px) {
+   .torii { width: 200px; height: 120px; margin-bottom: 40px; }
+  .torii .top-bar { height: 18px; }
+  .torii .cross-bar { height: 12px; top: 18px; }
+  .torii .pillar-left, .torii .pillar-right { height: 90px; width: 18px; top: 20px; }
+  .torii .shadow-left, .torii .shadow-right { height: 90px; width: 12px; top: 20px; }
+
+    form {
+      padding: 30px;
+    }
+
+    form h2 { font-size: 28px; }
+  }
+
+</style>
+
+<script>
+ const form = document.getElementById('contactForm')
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    alert('¡Gracias por tu mensaje! Nos pondremos en contacto pronto.');
+    this.reset();
+  });
+</script>
