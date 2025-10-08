@@ -6,6 +6,7 @@
     "tailwindcss": "^3.4.17"
   },
   "dependencies": {
+    "@studio-freight/lenis": "^1.0.42",
     "astro": "^5.14.1"
   },
   "scripts": {

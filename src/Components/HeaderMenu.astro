@@ -7,10 +7,10 @@
 		</a>
 	</div>
     <div class="nav-links" >
-       <ul><li><a href="#Home" class="active">Home</a></li></ul>
+       <ul><li><a href="#Home">Home</a></li></ul>
   <ul><li><a href="#Entrantes">Menú</a></li></ul>
     <ul><li><a href="/ordenaya">Order</a></li></ul>
-  <ul><li><a href="#buzon_form">Contact</a></li></ul>
+  <ul><li><a href="#contactForm">Contact</a></li></ul>
 
     </div>
   </nav>
@@ -26,10 +26,23 @@
   </div>
 
   <div class="arrow-bottom">
-	<svg xmlns="http://www.w3.org/2000/svg" height="1px" viewBox="0 -960 960 960" width="1px" fill="#fff"><path d="M440-800v487L216-537l-56 57 320 320 320-320-56-57-224 224v-487h-80Z"/></svg>
+	<img src="public/img/keyboard-arrow.png" alt="">
   </div>
 </header>
+<script>
+	const nav_link = document.querySelector('.nav-links');
+	const items = nav_link.querySelectorAll('a');
+	items.forEach(item => {
+  item.addEventListener('mouseenter', () => {
+    // quitar "active" de todos los links
+    items.forEach(i => i.classList.remove('active'));
 
+    // poner "active" solo en el link donde está el mouse
+    item.classList.add('active');
+  });
+});
+
+</script>
 <style>
 	header{
 		width: 100vw;
@@ -51,7 +64,7 @@
 	}
 
 	nav{
-		
+		position: fixed;
 		top: 0;
 		width: 100%;
 		z-index: 1000;
@@ -128,9 +141,9 @@
 	margin-bottom: 10px;
 }
 
-.arrow-bottom svg{
-	width: 30px;
-	height: 30px;
+.arrow-bottom img{
+	width: 50px;
+	height: 50px;
 	animation: pulse 2s infinite;
 	
 }
