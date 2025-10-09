@@ -7,7 +7,7 @@
 		</a>
 	</div>
     <div class="nav-links" >
-       <ul><li><a href="#Home">Home</a></li></ul>
+       <ul><li><a href="#Home" class="active">Home</a></li></ul>
   <ul><li><a href="#Entrantes">Menú</a></li></ul>
     <ul><li><a href="/ordenaya">Order</a></li></ul>
   <ul><li><a href="#contactForm">Contact</a></li></ul>
@@ -29,20 +29,7 @@
 	<img src="public/img/keyboard-arrow.png" alt="">
   </div>
 </header>
-<script>
-	const nav_link = document.querySelector('.nav-links');
-	const items = nav_link.querySelectorAll('a');
-	items.forEach(item => {
-  item.addEventListener('mouseenter', () => {
-    // quitar "active" de todos los links
-    items.forEach(i => i.classList.remove('active'));
 
-    // poner "active" solo en el link donde está el mouse
-    item.classList.add('active');
-  });
-});
-
-</script>
 <style>
 	header{
 		width: 100vw;

@@ -6,7 +6,7 @@
   <div class="menu-container">
     <div class="menu-picker">
 
-      <div class="section-item">
+      <div class="section-item picker">
         <img src="public/img/platillos-picker/Entrante.jpg" alt="" />
         <span>Entrantes</span>
         <div class="Barra_roja" hidden></div>
@@ -121,12 +121,10 @@
     border-radius: 50%;
   }
 
-  .Barra_roja {
+  .picker {
     border-bottom: 5px solid #9d0208;
   }
-  .section-item img:hover {
-  animation agrandar 0.7s forwards; /* duración y que conserve el último estado */
-  }
+  
   .grid-menu{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -141,22 +139,7 @@
     color: #fff;
     width: 80%;
   }
-
-  @keyframes agrandar{
-    0% {
-          transform: scale(1);
-    }
-   
-    100% {
-          transform: scale(1.1);
-
-
-    }
-  }
-  .menu-item:hover {
-  animation: agrandar 0.7s forwards; /* duración y que conserve el último estado */
-
-  }
+ 
 
   .menu-item img{
     width: 100%;
@@ -180,47 +163,3 @@
 
 </style>
 
-<script>
-   const max = 300;
-    const min = 100; 
-    const numpr = 6; //numero de productos
-    let preciosram = [];
-    const grid = document.querySelector("#Entrantes .grid-menu");
-     const items = grid.querySelectorAll(".menu-item");
-    for(var i=0; i< numpr; i++) {
-          let precioR = Math.floor(Math.random()  * (max - min + 1)) + min;
-          preciosram.push(precioR);
-          console.log(preciosram[i])
-    
-
-    }
-     
-     items.forEach((item, idx) => {
-      let span = document.createElement("span")
-  span.textContent = `$${(preciosram[idx])} mxn`;
-  item.appendChild(span);
-
-     })
-
-     const itemsM = document.querySelectorAll(".section-item");
-
-itemsM.forEach(item => {
-  item.addEventListener("mouseenter", () => {
-    // Ocultar todas las barras
-    document.querySelectorAll(".Barra_roja").forEach(bar => {
-      bar.hidden = true;
-    });
-
-    // Mostrar la barra del item clicado
-    const barra = item.querySelector(".Barra_roja");
-    barra.hidden = false;
-
-   
-    // Mostrar la sección que corresponde al texto (span)
-    const nombre = item.querySelector("span").textContent.trim();
-    const section = document.getElementById(nombre);
-    if(section) section.hidden = false;
-  });
-});
-
-</script>
